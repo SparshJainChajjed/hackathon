@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Teen Support</title>
+</head>
+<body>
+<h1>Teen Support Tips</h1>
+<ul id="tips"></ul>
+<script>
+fetch('tips.json').then(r=>r.json()).then(d=>{const u=document.getElementById('tips');d.tips.forEach(t=>{const li=document.createElement('li');li.textContent=t;u.appendChild(li);});});
+</script>
+</body>
+</html>
